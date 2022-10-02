@@ -4,18 +4,19 @@ import { FaUserAlt, FaShoppingCart, FaSearch, FaHamburger } from "react-icons/fa
 import { GiCancel } from "react-icons/gi"
 import Logo from "../ui/Logo";
 import Search from "../ui/Search";
+import {useRouter} from 'next/router'
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
-
-
+  const router = useRouter();
+  
   return (
-    <div className="h-[5.5rem] bg-secondary">
+    <div className={`h-[5.5rem] z-40 relative ${router.asPath === "/" ? "bg-transparent" : "bg-secondary"}`}>
       <div className="container mx-auto text-white flex justify-between items-center h-full">
         <div><Logo /></div>
         <nav className={`sm:static absolute top-0 left-0 sm:h-auto sm:w-auto 
-        h-full w-full sm:text-white text-black sm:bg-transparent bg-white
+        h-screen w-full sm:text-white text-black sm:bg-transparent bg-white
         sm:flex hidden
         ${isMenuModal !== false && "!grid place-content-center "} `}  >
           <ul className="flex gap-x-2 sm:flex-row flex-col items-center ">
