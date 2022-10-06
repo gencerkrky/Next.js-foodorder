@@ -2,6 +2,7 @@ import Home from "./home"
 import Head from 'next/head'
 import Header from "../components/layout/Header"
 import * as ReactDOM from 'react-dom';
+import Input from "../components/form/Input";
 
 
 export default function Index() {
@@ -16,8 +17,6 @@ export default function Index() {
       </Head>
       <Header/>
       <Home />
-      
-
     </div>
   )
 }
