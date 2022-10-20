@@ -1,4 +1,5 @@
 import React from 'react'
+import Customers from '../../components/customers/Customers'
 import MenuWrapper from '../../components/products/MenuWrapper'
 import About from '../../components/ui/About'
 import Campaigns from '../../components/ui/Campaigns'
@@ -7,13 +8,14 @@ import Reservation from '../../components/ui/Reservation'
 
 const index = () => {
   return (
-    <div>
+    <React.Fragment>
       <Carousel />
       <Campaigns />
       <MenuWrapper />
       <About />
       <Reservation/>
-    </div>
+      <Customers/>
+    </React.Fragment>
   )
 }
 
