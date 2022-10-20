@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 const CustomersItem = ({ imgSrc }) => {
+    
   return (
-    <div className="mt-5">
+    <div className="mt-5 mx-4">
       <div className="p-6 bg-secondary text-white rounded[5px] ">
         <p>
           Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
